@@ -4,4 +4,23 @@ table, th, td {
 }
 th, td { 
   padding:10px 20px; 
+  
+}
+table{
+  margin:20px auto;
+}
+div{
+  border : 1px solid black;
+  margin-bottom: 5px;
+  margin:20px auto;
+  text-align:center;
+  box-sizing: border-box;
+  width: 600px;
+  
+}
+#container{
+  box-sizing: border-box;
+  width: 800px;
+  border: none;
+  
 }
