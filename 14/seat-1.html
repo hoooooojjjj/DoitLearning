@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자리 배치도</title>
+  <style>
+    td{
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>자리 배치도</h1>
@@ -16,7 +22,15 @@
     else
       rowNum = parseInt(memNum / colNum) + 1;
 
-    document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+    document.write('<table>');
+      for(var i = 1; i<=rowNum; i++){
+        document.write(`<tr>`)
+        for(var k = 1; k<=colNum; k++){
+          document.write(`<td> 좌석 ${k} </td>`)
+      }  
+      document.write(`</tr>`)
+    }
+    document.write('</table>');
   </script>
 </body>
 </html>
