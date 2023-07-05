@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Array 객체의 메서드</title>
+</head>
+<body>
+	<script>
+		let arr0 = [1,2,3,4];
+		let arr1 = ['a','b','c','d','e'];
+
+		let arr01 = arr0.concat(arr1);
+		let arr10 = arr1.concat(arr0);
+		document.write(`${arr01}, ${arr10}`);
+		document.write("<hr>");
+
+		let string0 = arr0.join();
+		let string1 = arr1.join('/');
+		document.write(`${string0}, ${string1}`);
+		document.write("<hr>");
+
+		let pu = arr0.push(5,6);
+		let unsh = arr1.unshift('f','g');
+		document.write(`${arr0}, ${arr1}`);
+		document.write("<hr>");
+
+		let po = arr0.pop();
+		let sh = arr1.shift();
+		document.write(`${arr0}, ${arr1}`);
+		document.write("<hr>");
+
+		let num0 = [1,2,3,4,5];
+		let str = ['안녕','하세','요'];
+		let str1 = ['안녕','하세','열'];
+
+		let sp1 = num0.splice(2);
+		document.write(`${sp1}, ${num0}`);
+		document.write("<hr>");
+
+		let sp2 = str.splice(1,1);
+		document.write(`${sp2}, ${str}`);
+		document.write("<hr>");
+
+		let sp3 = str1.splice(2,1,"요");
+		document.write(`${sp3}, ${str1}`);
+		document.write("<hr>");
+
+		 
+	</script>
+</body>
+</html>

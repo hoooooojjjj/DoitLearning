@@ -22,11 +22,18 @@
     else
       rowNum = parseInt(memNum / colNum) + 1;
 
+    var seatno = 1;
+
     document.write('<table>');
       for(var i = 1; i<=rowNum; i++){
         document.write(`<tr>`)
+
         for(var k = 1; k<=colNum; k++){
-          document.write(`<td> 좌석 ${k} </td>`)
+
+          if(seatno > memNum) break;
+          
+          document.write(`<td> 좌석 ${seatno} </td>`)
+          seatno++;
       }  
       document.write(`</tr>`)
     }

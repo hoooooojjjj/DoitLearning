@@ -8,11 +8,19 @@
         border:1px solid black;
         padding:10px;
         text-align:center;
-        background:#eee;
+        background:#eee; 
       }
     </style>
   </head>
   <body>    
     <h1>당첨자 발표</h1>
+    <script>
+      let rotte = function(a){
+        let owner = Math.floor(Math.random() * a + 1);
+          return owner;
+        }
+      let seed = prompt("전체 응모자 수");
+      document.write(rotte(seed));
+    </script>
   </body>
 </html>

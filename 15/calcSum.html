@@ -6,6 +6,20 @@
 	<title>1부터 n까지 더하기</title>
 </head>
 <body>
+	<script>
+		function sumN(n){
+			let sumn = 0;
+			for(let i = 1; i<=n; i++){
+				sumn += i;
+			}
+			document.write(`1부터${n}까지 더하면 ${sumn}`);
+		}
 
+		let N = prompt("얼마까지 더할까요?");
+		if(N !== null){
+			sumN(parseInt(N))
+		}
+		else alert("취소하셨습니다.")
+	</script>
 </body>
 </html>

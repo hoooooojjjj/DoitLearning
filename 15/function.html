@@ -22,6 +22,15 @@
       var userName = prompt("이름을 입력하세요.");
       document.write("안녕하세요? <span class='accent'>" + userName + "</span>님!");
     }());
+
+    let sum = function(a,b){
+      document.write(`<h1>합은 ${a+b}</h1>`);
+    }
+    sum(10,20);
+
+    let sum2 = (d,g) => document.write(`<h2>합은 ${d+g}</h2>`);
+
+    sum2(1,20);
   </script>	
 </body>
 </html>
