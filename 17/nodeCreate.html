@@ -12,10 +12,21 @@
     <p>공부할 주제를 기록해 보세요</p>
     <form action="">
       <input type="text" id="subject" autofocus>
-      <button>추가</button>
+      <button onclick="newno(); return false;">추가</button>
     </form>
     <hr>  
     <ul id="itemList"></ul>  
   </div>
+  <script>
+    function newno(){
+      let newp = document.createElement("li");
+      let Text = document.querySelector("#subject");
+      let newT = document.createTextNode(Text.value);
+      newp.appendChild(newT);
+      let item = document.querySelector("#itemList");
+      item.insertBefore(newp,item.childNodes[0]);
+      subject.value = "";
+    }
+  </script>
 </body>
 </html>

@@ -17,15 +17,20 @@
 <body>
   <div id="container">    
     <h1>DOM을 공부합시다</h1>
-    <a href="#" onclick="addP(); this.onclick='';">더 보기</a>    
+    <a href="#" >더 보기</a>    
     <div id="info"></div>
   </div>
   <script>
+
+    let adde = document.querySelector("a");
+    adde.onclick = addP; this.onclick = "";
+
     function addP() {
       var newP = document.createElement("p");
       var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
       newP.appendChild(txtNode);
       document.getElementById("info").appendChild(newP);
+      this.onclick = "";
     }
   </script>
 </body>

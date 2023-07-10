@@ -4,8 +4,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>연습문제 2</title>
+	<style>
+		.input{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	
+	<label><input class = "inputr" type="text" size="1">행</label>
+	<label><input class = "inputc" size="1">열</label>
+	<button id="btn" onclick="tab(); return false;">작성</button>
+	<div></div>
 </body>
+<script>
+	let inputr = document.querySelector(".inputr");
+	let inputc = document.querySelector(".inputc");
+	let btn = document.querySelector("#btn");
+
+	function tab(){
+	let table = document.createElement("table");
+	for(let i = 0; i < inputr.value; i++){
+		var tr = document.createElement("tr");
+		for(let k = 0; k < inputc.value; k++){
+			var td = document.createElement("td");
+			var tdT = document.createTextNode(`${i}, ${k}`);
+			td.appendChild(tdT);
+			tr.appendChild(td);
+	}
+	table.appendChild(tr);
+	}
+	document.querySelector("div").appendChild(table);
+}
+
+
+</script>
 </html>
